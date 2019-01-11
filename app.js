@@ -2,6 +2,7 @@ const express      = require('express');
 const logger       = require('morgan');
 const bodyParser   = require('body-parser');
 const mongoose     = require('mongoose');
+const cors         = require('cors')
 mongoose.Promise = Promise;
 
 mongoose.connect('mongodb://localhost/savings-app')
@@ -34,7 +35,7 @@ app.use(
     // accept cookies across domains
     credentials: true,
     // ONLY allow these domains to connect
-    origin: ["https://savings-app-backend.herokuapp.com"]
+    origin: ["https://savings-app-backend.herokuapp.com",'http://localhost:8080']
   })
 );
 
