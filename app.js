@@ -35,7 +35,7 @@ app.use(
     // accept cookies across domains
     credentials: true,
     // ONLY allow these domains to connect
-    origin: ["https://savings-app-backend.herokuapp.com",'http://localhost:8080']
+    origin: ['https://dev-savings-app.firebaseapp.com','http://localhost:8080']
   })
 );
 
