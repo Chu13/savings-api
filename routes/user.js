@@ -10,5 +10,5 @@ router.route("/user/login")
 
 router.route("/user/refresh")
   .get(user.validations.refresh, user.refresh);
-
+ 
 module.exports = router;
