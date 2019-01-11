@@ -29,6 +29,14 @@ app.use(function(req, res, next){
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(
+  cors({
+    // accept cookies across domains
+    credentials: true,
+    // ONLY allow these domains to connect
+    origin: ["https://savings-app-backend.herokuapp.com"]
+  })
+);
 
 app.use('/api', require('./routes/user'));
 
