@@ -20,12 +20,7 @@ const app = express();
 // default value for title local
 // app.locals.title = 'Express - Generated with IronGenerator';
 
-app.use(function(req, res, next){
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "HEAD, GET, POST, OPTIONS, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Authorization, Accept");
-  next();
-})
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
